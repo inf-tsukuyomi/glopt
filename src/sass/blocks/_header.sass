@@ -1,0 +1,42 @@
+.header
+    display: flex
+    justify-content: space-between
+    &__navbar
+        
+        ul
+            margin-top: 37px
+            display: flex
+            padding: 0
+            margin-bottom: 0
+            li
+                padding-right: 12px
+                padding-left: 12px
+                list-style-type: none
+                border-right: 1px dotted #7c7c7c
+                &:nth-child(6)
+                    border-right: none
+                a
+                    font-family: Roboto
+                    font-size: 15px
+                    font-weight: 400
+                    color: #ffffff
+                    &:hover
+                        color: $main-color
+                        cursor: pointer
+    &__contacts
+        margin-top: 25px
+    &__descr
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 300
+        color: #ffffff
+        text-align-last: right
+    &__phone
+        font-family: Roboto
+        font-size: 19px
+        font-weight: 700
+        color: #ffffff
+        &:hover
+            color: $main-color
+            cursor: pointer
+                    
