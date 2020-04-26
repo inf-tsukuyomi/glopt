@@ -1,0 +1,56 @@
+.feedback
+    position: relative
+    padding-bottom: 58px
+    min-height: 290px
+    &__orange-ball
+        margin: 20px auto
+        width: 102px
+        height: 102px
+        border: 1.0px solid $main-color
+        border-radius: 100%
+        img
+            display: block
+            margin: 17px auto
+        &::after
+            content: ''
+            position: absolute
+            top: 100px
+            left: 0
+            width: 500px
+            height: 1px
+            background-color: #898989
+        &::before
+            content: ''
+            position: absolute
+            top: 100px
+            right: 0
+            width: 500px
+            height: 1px
+            background-color: #898989
+    &__form
+        padding: 0 160px
+        &::after
+            content: ''
+            position: absolute
+            top: 100px
+            left: 0
+            width: 1px
+            height: 165px
+            background-color: #898989
+        &::before
+            content: ''
+            position: absolute
+            top: 100px
+            right: 0
+            width: 1px
+            height: 165px
+            background-color: #898989    
+        input
+            margin: 0 1px
+            padding: 0 27px
+            width: 268px
+            height: 45px
+            background-color: #ffffff
+            border: 1.0px solid rgba(0,0,0,0.21)
+            border-radius: 25px
+                
