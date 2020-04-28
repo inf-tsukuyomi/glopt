@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="promo" class="promo">
        <div class="container">
            <header class="header">
-                <a href="#"><img src="icons/logo.svg" alt="logo" class="header__logo"></a>
+                <a href="#promo"><img src="icons/logo.svg" alt="logo" class="header__logo"></a>
                 <nav class="header__navbar">
                     <ul>
-                        <li><a href="">Преимущества</a></li>
-                        <li><a href="">Наша работа</a></li>
-                        <li><a href="">Цены</a></li>
-                        <li><a href="">Схема работы</a></li>
-                        <li><a href="">Отзывы</a></li>
-                        <li><a href="">Контакты</a></li>
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#works">Наша работа</a></li>
+                        <li><a href="#price">Цены</a></li>
+                        <li><a href="#scheme">Схема работы</a></li>
+                        <li><a href="#feedback">Отзывы</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__contacts">
                     <div class="header__descr">Есть вопросы?</div>
                     <a href="tel:+79264230100" class="header__phone">+7 (926) 423 01 00</a>
                 </div>
-                <button class="button button_mt21">Перезвоните мне</button>
+                <a href="#consultation"><button class="button button_mt21">Перезвоните мне</button></a>
            </header>
            <h3 class="promo__small-subtitle">Global Opt - логистика полного цикла из Китая в Россию</h3>
            <h1 class="promo__title">ДОСТАВКА ГРУЗОВ ИЗ КИТАЯ</h1>
@@ -49,11 +49,11 @@
                     <div class="promo__descr">Экспресс доставка 1-2 дня из Гуанчжоу в Москву от 25$/кг</div>
                 </div>
             </div>
-            <button class="button button_center">Получить расчет</button>
+            <a class="promo__link" href="#consultation"><button class="button button_center">Получить расчет</button></a>
        </div> 
     </section>
 
-    <section class="advantages">
+    <section id="advantages" class="advantages wow fadeInUp delay-0.7s">
         <div class="container">
             <h2 class="title">Преимущества работы с GlobalOpt</h2>
             <div class="advantages__wrapper">
@@ -124,7 +124,7 @@
         </div>
     </section>
 
-    <section class="works">
+    <section id="works" class="works wow fadeInUp delay-0.7s">
         <div class="container">
             <h2 class="title">Наша работа - больше чем просто доставка</h2>
             <div class="line line_center"></div>
@@ -149,7 +149,7 @@
         </div>
     </section>
 
-    <section class="agent">
+    <section class="agent wow fadeInUp delay-0.7s">
         <div class="container">
             <div class="agent__ball"><img src="icons/manager.svg" alt="man"></div>
             <div class="agent__title">Агент в Китае</div>
@@ -157,7 +157,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price wow fadeInUp delay-0.7s">
         <div class="container">
             <div class="title">Цены на любой вариант доставки</div>
             <div class="line line_center"></div>
@@ -219,21 +219,21 @@
         </div>
     </section>
 
-    <section class="feedback">
+    <section class="feedback wow fadeInUp delay-1s" id="consultation">
         <div class="container">
             <div class="title">Заказать бесплатную консультацию</div>
             <div class="feedback__orange-ball"><img src="icons/manager_orange.svg" alt=""></div>
-            <form action="#" class="feedback__form">
+            <form action="#consultation" class="feedback__form">
                 <input name="name" type="text" placeholder="Ваше имя">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
 
-                <button class="button button_submit">Отправить заявку</button>
+                <button data-modal="consultation" class="button button_submit">Отправить заявку</button>
             </form>
         </div>
     </section>
 
-    <section class="agent agent_sity">
+    <section class="agent agent_sity wow fadeInUp delay-0.7s">
         <div class="container">
             <div class="agent__ball"><img src="icons/feed.svg" alt="man"></div>
             <div class="agent__title">Менеджеры компании</div>
@@ -241,7 +241,7 @@
         </div>
     </section>
 
-    <section class="scheme">
+    <section id="scheme" class="scheme wow fadeInUp delay-0.7s">
         <div class="container">
             <div class="title">Схема работы с нами</div>
             <div class="scheme__wrapper">
@@ -287,7 +287,7 @@
         </div>
     </section>
 
-    <section class="feed">
+    <section id="feedback" class="feed wow fadeInUp delay-0.7s">
         <div class="container">
             <div class="title">отзывы наших клиентов</div>
             <div class="line line_center"></div>
@@ -309,24 +309,24 @@
         </div>
     </section>
 
-    <section class="questions">
+    <section class="questions wow fadeInUp delay-0.7s" id=quest>
         <div class="container">
             <div class="questions__up">
                 Остались вопросы?<br><span>Напишите нам!</span>
             </div>
             <div class="questions__down">
-                <form action="#" class="questions__form">
+                <form id="consultation-form" action="#quest" class="questions__form">
                     <input name="name" type="text" placeholder="Ваше имя">
                     <input name="phone" placeholder="Ваш телефон">
                     <input name="email" type="email" placeholder="Ваш E-mail">
-                    <input name="name" type="text" placeholder="Ваше сообщение">
+                    <input class="form__message" name="text" type="text" placeholder="Ваше сообщение">
 
-                    <button class="button button_submit-none-effect">Отправить заявку</button>
+                    <button data-modal="consultation" class="button button_submit-none-effect">Отправить заявку</button>
                 </form>
             </div>
         </div>
     </section>
-    <div class="map">
+    <div id="contacts" class="map">
         <div class="container">
             <div class="map__adr">
                 <address><span>г. Москва</span><br>ул. Садовническая, дом 5, офис 4-6</address>
@@ -347,16 +347,30 @@
                     <div class="footer__descr">Есть вопросы?</div>
                     <a href="tel:+79264230100" class="footer__phone">+7 (926) 423 01 00</a>
                 </div>
-                <button class="button button_footer">Перезвоните мне</button>
+                <a href="#consultation"><button class="button button_footer">Перезвоните мне</button></a>
             </div>
             
         </div>
     </footer>
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal_mini" id="thanks">
+                <div class="modal__close">&times;</div>
+                <div class="modal__subtittle">Спасибо за вашу заявку!</div>
+                <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+            </div>
+        </div>
+    </div>
 
+    <a href="#promo" class="up">
+        <img src="icons/chevron-circle-up-solid.svg" alt="Up">
+    </a>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
-    
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
