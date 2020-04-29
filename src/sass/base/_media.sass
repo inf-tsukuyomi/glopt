@@ -1,15 +1,72 @@
-@media ( max-width: 1199px  )
-    .promo
-        h1
-            font-size: 60px
-        h2
-            font-size: 35px
-        &__item
-            .promo__descr
-                width: 230px
-                font-size: 14px
-    .header__navbar
-        display: none
+@media (max-width: 1199.98px)
+    .container
+        .promo
+            h1
+                font-size: 60px
+            h2
+                font-size: 35px
+            &__item
+                .promo__descr
+                    width: 230px
+                    font-size: 14px
+        .header
+            .button_mt21
+                display: none
+            &__navbar
+                display: block
+                position: fixed
+                top: 0
+                left: -100%
+                width: 50%
+                height: 100vh
+                background-color: rgba(0, 0, 0, .5)
+                padding: 20px 15px
+                z-index: 15
+                transition: 1s all
+                &_active
+                    left: 0
+                ul  
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    li
+                        border-right: none
+                        margin-top: 20px
+                        text-align: center
+                        a
+                            font-size: 18px
+            &__contacts
+                margin-top: 10px
+            &__descr
+                text-align-last: center
+            &__hamburger
+                z-index: 16
+                display: block
+                position: absolute
+                right: 10px 
+                top: 30px
+                transform: translateY(-50%)
+                width: 40px
+                span
+                    display: block
+                    height: 2px
+                    width: 100%
+                    background-color: $main-color
+                    margin-bottom: 5px
+                    transition: 0.5s all
+                &_active
+                    position: fixed
+                    top: 80px
+                    right: 20px
+                    span
+                        margin-bottom: -2px
+                        &:nth-child(1)  
+                            transform: rotate(-45deg)
+                        &:nth-child(2)  
+                            display: none
+                        &:nth-child(3)  
+                            transform: rotate(45deg)
+
 
     .advantages__wrapper
         flex-direction: column
@@ -50,8 +107,199 @@
                 width: 420px          
         .feedback__form
             padding: 0 71px
+            #name-error, #email-error, #text-error, #phone-error
+                left: -100%
         .button_submit::before
             width: 380px
         .button_submit::after
             width: 380px
-    
+        .questions__form
+            #name-error, #email-error, #text-error, #phone-error
+                left: -100%
+@media (max-width: 991.98px)
+    .container
+        .promo
+            &__item
+                .promo__descr
+                    width: 180px
+            &__title
+                font-size: 56px
+            &__big-subtitle
+                font-size: 33px
+            &__ellipse
+                width: 100%
+        .price
+            &__wrapper
+                flex-direction: column
+                align-items: center
+            &__item
+                .price__up-item
+                    width: 330px
+                .price__down-item
+                    width: 330px
+        .feedback__orange-ball
+            &::after
+                width: 300px
+            &::before
+                width: 300px          
+        .feedback__form
+            padding: 0 41px
+            input
+                width: 208px
+        .button_submit::before
+            width: 250px
+        .button_submit::after
+            width: 250px
+        .scheme
+            &__wrapper
+            &__item
+                .scheme__descr
+                    width: 175px
+                    font-size: 12px
+        .questions__up
+            width: 530px
+        .questions__down
+            width: 530px
+            height: 210px
+        .questions__form
+            padding: 18px 20px 0 20px
+            input
+                width: 156px
+            .form__message
+                width: 480px
+                min-height: 51px
+        .map__adr
+            left: 195px
+        .footer__text
+            font-size: 10px
+        .footer__descr
+            font-size: 10px
+        .footer__phone
+            font-size: 15px
+
+@media (max-width: 767.98px)
+    .container
+        .promo
+            &__item
+                .promo__descr
+                    width: 100px
+                    font-size: 10px
+                    line-height: 10px
+            &__title
+                font-size: 40px
+                margin-top: -3px
+            &__big-subtitle
+                font-size: 24px
+                margin-top: -14px
+        .feedback__orange-ball
+            &::after
+                width: 210px
+            &::before
+                width: 210px          
+        .feedback__form
+            padding: 0 11px
+            input
+                width: 168px
+        .button_submit::before
+            width: 173px
+        .button_submit::after
+            width: 173px
+        .scheme__wrapper, .scheme__wrapper-down
+            flex-direction: column
+            .scheme__item
+                margin-top: 10px
+                .scheme__descr
+                    width: 100%
+        .feed__carousel
+            width: 100%
+            .slick-prev
+                left: 171px
+        .map__adr
+            left: 105px
+        .footer__text
+            margin-left: 10px
+        .footer__logo
+            width: 50px
+            height: 64px
+        .footer__descr, .footer__phone
+            display: none
+
+@media (max-width: 575.98px)
+    .container
+        .header__contacts
+            display: none
+        .header__logo
+            height: 60px
+        .promo
+            &__item
+                .promo__descr
+                    width: 100%
+                    font-size: 10px
+                    line-height: 10px
+            &__title
+                font-size: 24px
+                margin-top: -18px
+            &__big-subtitle
+                font-size: 14px
+                margin-top: -28px
+            &__small-subtitle
+                font-size: 12px
+            &__wrapper
+                flex-direction: column
+            &__ellipse
+                width: 80%
+                margin-top: 5px
+
+        .advantages__text
+            width: 100%
+        
+        .scheme__wrapper-down
+            padding: 0 0 
+        .questions__up
+            width: 80%
+        .questions__down
+            width: 80%
+            height: 300px
+        .map__adr
+            padding: 11px 9px 
+            width: 250px
+            height: 115px
+            left: 70px
+        .feedback__orange-ball
+            &::after
+                width: 0
+            &::before
+                width: 0          
+        .feedback__form
+            padding: 0 41px
+            &::after
+                height: 0
+            &::before
+                height: 0
+            input
+                margin: 10px auto
+                display: block
+                width: 208px
+        .button_submit::before
+            width: 0
+        .button_submit::after
+            width: 0
+        .questions__form
+            padding: 5px 10px 0 10px
+            input
+                width: 480px
+                margin: 5px auto
+        .works__image
+            width: 90%
+        .feed__carousel
+            width: 100%
+            .slick-prev
+                left: 110px
+            .slick-next
+                right: 120px
+        .footer__wrapper
+            a
+                display: none
+                .button__footer
+                    display: none
+                

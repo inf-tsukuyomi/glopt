@@ -83,4 +83,9 @@ $(document).ready(function(){
       return false;
     });
     new WOW().init();
+
+    $('.header__hamburger').on('click', function(){
+      $('.header__navbar').toggleClass('header__navbar_active');
+      $('.header__hamburger').toggleClass('header__hamburger_active');
+  });
   });
